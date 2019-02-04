@@ -1,0 +1,50 @@
+.backgroundpurple
+{
+	background-color: #154ae1;
+
+}
+body
+{
+		background-color:#e5e5e5;
+		color:#00ff00;
+		font-size: 16px;
+		padding: 15px;
+		padding-left: 20px;
+		margin: 15px;
+}
+#picture_info
+{
+	background-color: #e2e4e5;
+	font-size: 2em;
+}
+#container
+{
+	font-size: 25px;
+}
+nav ol li
+{
+	background-color: pink;
+	list-style-type: decimal;
+}
+article
+{
+	font-style: italic;
+}
+#soccer
+{
+	list-style-image: url("../images/soccer_ball");
+}
+
+
+a:link
+{
+	color: white;
+}
+a:visited
+{
+	color: black;
+}
+a:hover, a:focus
+{
+	color: pink;
+}
