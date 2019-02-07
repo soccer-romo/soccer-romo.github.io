@@ -1,10 +1,10 @@
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 1
-   Case Problem 1
-   Filename: jtc_base.css
+   Case Problem 2
+   Filename: ms_base.css
 
-   This file contains the base styles used by all pages at JTC
+   This file contains the base styles used by all pages at Math Strings
 
 */
 
@@ -167,7 +167,6 @@ figure {
 }
 
 
-
 /* =============================================
 	Default styles for web forms
    =============================================
@@ -207,7 +206,6 @@ button[disabled], input[disabled] {
 input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box;
 	padding: 0;
-
 }
 input[type="search"] {
 	-webkit-appearance: textfield;
