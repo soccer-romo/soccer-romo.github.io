@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Champagne;
+  src: url(cac_champagne.woff) format('woff'),
+  url(cac_champagne.ttf) format('tff');
+}
+#play1{
+  font-family: Champagne, cursive;
+}
+html, body
+{
+  font-family: "times new roman", serif;
+  font-weight: 400;
+  font-style: italic;
+  fo
+}
+
+
+h1,h2,h3,h4,h5,h6
+{
+  font-variant: small-caps;
+  font-family: 'Major Mono Display', monospace;
+}
+.backgroundpurple
+{
+  background-color: purple;
+  color: white;
+}
+ul
+{
+  color: hsl(80,5%,50%);
+  background-color: hsla(0,100%,50%,.1);
+}
