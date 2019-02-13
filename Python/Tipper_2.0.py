@@ -9,6 +9,6 @@ tip_percent = tip_percent * .01
 
 bill_total = bill_total * tip_percent + bill_total
 
-print("Your total plus tip will be: $" + str(bill_total))
+print("Your total plus tip will be: $" + str(round(bill_total,2)))
 
 input("\n\nPress the enter key to exit")
