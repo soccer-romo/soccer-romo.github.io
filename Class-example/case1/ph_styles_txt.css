@@ -2,17 +2,17 @@
 @font-face {
   font-family: Champagne;
   src: url("cac_champagne.woff") format("woff"),
-  url("cac_champagne.tff") format("truetype");
+  url("cac_champagne.ttf") format("truetype");
 }
 @font-face{
   font-family: Grunge;
   src: url("1942.woff") format("woff"),
-  url("1942.tiff") format("truetype");
+  url("1942.tff") format("truetype");
 }
 @font-face {
   font-family: Dobkin;
   src: url("DobkinPlain.woff") format("woff"),
-  url("DobkinPlain.tiff") format('truetype');
+  url("DobkinPlain.tff") format('truetype');
 }
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
@@ -58,6 +58,7 @@ address {
   font-size: .9em;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 /* Navigation Styles */
@@ -87,7 +88,7 @@ nav > ul > li > a:hover {
 
 /* Section Styles */
 
-section > h1 {
+section.playbill > h1 {
   font-size: 3em;
   font-weight: normal;
   margin: 0px;
@@ -96,22 +97,34 @@ section > h1 {
   padding-bottom: 10px;
   padding-left: 20px;
 }
-#play1 {
+
+#play1 > h1{
   background-color: hsl(240, 100%, 88%);
   font-family: Champagne,cursive;
 }
-
-#play2 {
+#play1{
+  background-color: hsl(240, 100%, 88%);
+}
+#play2 > h1{
   background-color: hsl(25, 88%, 73%);
   font-family: Grunge,'Times New Roman', Times, serif;
 }
-#play3 {
+#play2{
+  background-color: hsl(25, 88%, 73%);
+}
+#play3 > h1{
   background-color: hsl(0, 100%, 75%);
   font-family:impact, charcoal, sans-serif;
 }
-#play {
+#play3{
+  background-color: hsl(0, 100%, 75%);
+}
+#play4 >h1{
   background-color: hsl(296, 86%, 86%);
   font-family: Dobkin,cursive;
+}
+#play4{
+  background-color: hsl(296, 86%, 86%);
 }
 
 /* Description List Styles */
