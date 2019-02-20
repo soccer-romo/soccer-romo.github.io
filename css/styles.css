@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/*
+  Name:David Niculea
+  Date:02/13/19
+  Document: Project Diet Water
+  Class: CIS 130-103
+*/
+html, body {
+  font-size: 110%;
+}
+
+/* background color */
+body>header {
+  text-align: center;
+  background-color: #4E8CF2;
+  color: black;
+}
+
+address {
+  background-color: #4E8CF2;
+}
+
+/* Header position */
+#menu_1, #menu_2 {
+text-align: right;
+}
+
+#heading {
+  font-family: cursive;
+}
+
+/* body position */
+body {
+  font-family: serif;
+}
+
+#main {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#contacts {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+footer {
+  text-align: center;
+  background-color: #4E8CF2;
+  color: #55EFCF;
+  margin-top: 2px;
+}
+
+/* Text Colors */
+address {
+  color: #55EFCF
+}
+
+/* borders */
+#main {
+  border: 4px solid #4E8CF2;
+}
+
+/* links */
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #55EFCF
+}
+
+a:active {
+  color: green;
+}
+
+a:hover {
+  color: green;
+}
+
+/* Pictures */
+#bottle {}
+
+#ocean {}
