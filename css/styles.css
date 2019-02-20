@@ -23,7 +23,7 @@ address {
 
 /* Header position */
 #menu_1, #menu_2 {
-text-align: right;
+  text-align: right;
 }
 
 #heading {
@@ -43,8 +43,6 @@ body {
 #contacts {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 footer {
