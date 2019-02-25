@@ -1,0 +1,47 @@
+#start {
+  display: flex;
+  flex-direction: row-reverse;
+}
+nav p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#section1{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+}
+#section p, #section div{
+  border: 1px solid black;
+}
+#my_paragraph{
+  background-color: green;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.container{
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+}
+#grid_nav{
+  grid-row-start: 1;
+  grid-row-end: 999;
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+.goleft , .goright{
+  width: 35%;
+border: 1px solid black
+}
+.goleft{
+  float: left;
+  clear: right;
+}
+.goright{
+  float: left;
+  clear:left;
+}
