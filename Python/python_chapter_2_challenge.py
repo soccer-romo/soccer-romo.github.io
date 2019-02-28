@@ -1,4 +1,4 @@
-#tipper program for class#
+#tipper program for class
 restarant_bill_total = 0
 tip_15 = .15
 tip_20 = .20
@@ -12,5 +12,5 @@ tip_0 = tip_15
 if tip_0: 20
 tip_0= tip_20
 
-restarant_bill_total = (restarant_bill_total * tip_0) + restarant_bill_total
-print ("This is your bill total plus tax: $" + str(restarant_bill_total)+ " Thank you!")
+restarant_bill_total = float(restarant_bill_total * tip_0) + restarant_bill_total
+print ("This is your bill total plus tax: $" + str(float(restarant_bill_total))+ " Thank you!")

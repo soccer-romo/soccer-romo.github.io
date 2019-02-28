@@ -1,6 +1,6 @@
 #Modify the Guess My Number game so that the player has a limited number of guesses. If the player fails to guess in time, the program should display an appropriately chastising message.
 #Psudocode
-#delcare my_number #set varible to = whatever the user inputs 
+#delcare my_number #set varible to = whatever the user inputs
 #add chances
 #Set loop i
 #import random
@@ -27,10 +27,10 @@ while (user_answer == "yes" or user_answer == "y"):
 			break
 
 
-	user_answer = input("Do you want to play again? ").lower()
+        user_answer = input("Do you want to play again? ").lower()
 
-	while(user_answer != "yes" and user_answer != "y" and user_answer != "no" and user_answer != "n"):
-		user_answer = input("Please enter in yes or no: ")
-	if (user_answer == "no" or user_answer == "n"):
-		print("Thank you for playing!")
-		break
+        while(user_answer != "yes" and user_answer != "y" and user_answer != "no" and user_answer != "n"):
+                user_answer = input("Please enter in yes or no: ")
+        if (user_answer == "no" or user_answer == "n"):
+                print("Thank you for playing!")
+                break
