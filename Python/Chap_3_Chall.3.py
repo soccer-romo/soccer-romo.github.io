@@ -14,7 +14,6 @@ while (user_answer == "yes" or user_answer == "y"):
 	my_number = str(random.randrange(0,11))
 	chances = 2
 	user_variable = input("Guess my number between 0 and 10. You get three chances: ")
-	
 	if (user_variable == my_number):
 		print("Good Job! You've guessed my number")
 	while (user_variable != my_number):
@@ -26,7 +25,7 @@ while (user_answer == "yes" or user_answer == "y"):
 		if (chances == 0):
 			print("Game Over. My number was " + str(my_number))
 			break
-	
+
 
 	user_answer = input("Do you want to play again? ").lower()
 
