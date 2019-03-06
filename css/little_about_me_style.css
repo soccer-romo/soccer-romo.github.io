@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/*html {
+  background-image: url('../images/Ocean_1.0.jpg');
+  background-repeat: no-repeat;
+  background-attachment:;
+  background-size:;
+  border-spacing:;
+  background-size: auto;
+  border: 2px solid green;
+  background-clip: content-box;
+}
+*/
+body {
+  border: 1px solid black;
+  border-radius: 5px 15px 30px 1px;
+  background-image:url('../images/Ocean_1.0.jpg');
+  background-repeat:no-repeat;
+  background-origin: border-box;
+  background-size: contain;
+  background-attachment:local;
+  background-blend-mode: hard-light;
+  background-repeat: round;
+
+}
+
+body {
+  color: yellow;
+}
