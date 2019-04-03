@@ -19,7 +19,8 @@
 
 /* Flex Layout Styles */
 body {
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   -webkit-flex: 1;
   -ms-flex:1;
 }
@@ -64,11 +65,12 @@ Set the height of the element to 40 pixels.*/
 */
 @media only screen and (min-width: 480px) {
   nav > ul > li{
-    flex-flow: row nowrap;
+    flex-direction:row;
+    flex-wrap: nowrap;
     height: 40px;
   }
 
-  nav > ul > li{
+  .horizontal > li{
     flex-basis: auto;
     flex-grow: 1;
     flex-shrink: 1;

@@ -34,3 +34,5 @@ while (user_answer == "yes" or user_answer == "y"):
         if (user_answer == "no" or user_answer == "n"):
                 print("Thank you for playing!")
                 break
+
+guess_my_number()
