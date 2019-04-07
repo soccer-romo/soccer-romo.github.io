@@ -1,10 +1,13 @@
-def ask_number(question, low, high): 
+def ask_number(question, low, high,step = 1): 
 	"""Ask for a number within a range.""" 
 	response = None 
-	while response not in range(low, high): 
+	while response not in range(low, high,step): 
 		response = int(input(question))
 	return response
 	
-
-ask_number()
+users_question = ("What is the range you want? Lowest # first and highest # second: ")
+print(users_question)
+low = int(input("Lowest: "))
+high = int(input("Highest: "))
+ask_number(users_question,low,high,step = 1)
 
