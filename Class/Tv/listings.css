@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+body{
+  text-align: center;
+}
+
+table, th, td{
+  border: 2px solid black;
+  border-collapse: collapse;
+  font-size: 125%;
+  padding: 5px;
+}
+.CBS {
+  background-color: grey;
+}
+
+.ABC {
+  background-color: lightgrey;
+}
+.NBC{
+  background-color: white;
+}
+.SundayCBS:hover ,.MondayCBS:hover ,
+.TuesdayCBS:hover ,.WednesdayCBS:hover ,
+.ThursdayCBS:hover ,.FridayCBS:hover ,
+.SaturdayCBS:hover ,
+.SundayABC:hover ,.MondayABC:hover ,
+.TuesdayABC:hover ,.WednesdayABC:hover ,
+.ThursdayABC:hover ,.FridayABC:hover ,
+.SaturdayABC:hover ,
+.SundayNBC:hover ,.MondayNBC:hover ,
+.TuesdayNBC:hover ,.WednesdayNBC:hover ,
+.ThursdayNBC:hover ,.FridayNBC:hover ,
+.SaturdayNBC:hover{
+  background: yellow
+}
