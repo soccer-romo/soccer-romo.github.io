@@ -3,75 +3,82 @@
 #puesdocode
 #create variables: total pool, strenght, Health, wisdom, dexterity
 
-total_pool = 2
+total_pool = 29
 strength = 0
 health = 0
 wisdom = 0
 dexterity = 0
 
-print ("Hi, welcome to this character creation where you will add points to the ablility in which you think it'll benifit you the most. The abilities you have are strength, health, wisdom, and dexterity.")
+print ("Hi, welcome to this character creation where you will add points to the ablility in which you think it'll benifit you the most. The abilities you have are strength, health, wisdom, and dexterity. If you add a (-) in front of ability it'll subtract from total pool. You have 30 use them wisely.")
 character_point = input("For your character which ability would you want to give first? Please type in: strength, or health, or wisdom, or dexterity. ").lower()
 	
-while (total_pool >= 0):
-	while (character_point == "strength" or character_point == "health" or character_point == "wisdom" or character_point == "dexterity" or character_point == "-strength" or character_point == "-health" or character_point == "-wisdom" or character_point == "-dexterity"):
-		if (character_point == "strength"):
-			strength += 1
-			total_pool -= 1
-			print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
-			character_point = input("What next? ").lower()
-			continue
-		
-		elif (character_point == "health"):
-			health += 1
-			total_pool -= 1
-			print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
-			character_point = input("What next? ").lower()
-			continue
-		
-		elif (character_point == "wisdom"):
-			wisdom += 1
-			total_pool -= 1
-			print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
-			character_point = input("What next? ").lower()
-			continue
-		
-		elif (character_point == "dexterity"):
-			dexterity += 1
-			total_pool -= 1
-			print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
-			character_point = input("What next? ").lower()
-			continue
-		
-		elif (character_point == "-strength"):
-			strength -= 1
-			total_pool += 1
-			print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
-			character_point = input("What next? ").lower()
-			continue
-			
-		elif (character_point == "-health"):
-			health -= 1
-			total_pool += 1
-			print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
-			character_point = input("What next? ").lower()
-			continue			
-			
-		elif (character_point == "-wisdom"):
-			wisdom -= 1
-			total_pool += 1
-			print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
-			character_point = input("What next? ").lower()
-			continue
-		
-		elif (character_point == "-dexterity"):
-			dexterity -= 1
-			total_pool += 1
-			print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
-			character_point = input("What next? ").lower()
-			continue
+while (character_point == "strength" or character_point == "health" or character_point == "wisdom" or character_point == "dexterity" or character_point == "-strength" or character_point == "-health" or character_point == "-wisdom" or character_point == "-dexterity"):
+	if (total_pool == 0):
+		break
+	if (character_point == "strength"):
+		strength += 1
+		total_pool -= 1
+		print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
+		character_point = input("What next? ").lower()
+		continue
 	
-	else:
-		character_point = input("Please type in: Strength, Health, Wisdom, or Dexterity. ").lower()
+	elif (character_point == "health"):
+		health += 1
+		total_pool -= 1
+		print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
+		character_point = input("What next? ").lower()
+		continue
+	
+	elif (character_point == "wisdom"):
+		wisdom += 1
+		total_pool -= 1
+		print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
+		character_point = input("What next? ").lower()
+		continue
+	
+	elif (character_point == "dexterity"):
+		dexterity += 1
+		total_pool -= 1
+		print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
+		character_point = input("What next? ").lower()
+		continue
+	
+	elif (character_point == "-strength"):
+		strength -= 1
+		total_pool += 1
+		print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
+		character_point = input("What next? ").lower()
+		continue
+		
+	elif (character_point == "-health"):
+		health -= 1
+		total_pool += 1
+		print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
+		character_point = input("What next? ").lower()
+		continue			
+		
+	elif (character_point == "-wisdom"):
+		wisdom -= 1
+		total_pool += 1
+		print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
+		character_point = input("What next? ").lower()
+		continue
+	
+	elif (character_point == "-dexterity"):
+		dexterity -= 1
+		total_pool += 1
+		print("Strength:" + str(strength) + " Health:" + str(health) + " Wisdom:" + str(wisdom) + " Dexterity:" + str(dexterity))
+		character_point = input("What next? ").lower()
+		continue
+				
 else:
-	print("You have finished your total pool of abilities.")
+	character_point = input("Please type in: Strength, Health, Wisdom, or Dexterity. ").lower()
+
+print("You have finished your total pool of abilities.")
+
+print("""Your abilities are now:
+Health: """ + str(health) + """
+Wisdom: """ + str(wisdom) + """
+Strength: """ + str(strength) + """
+Dexterity: """ +  str(dexterity) )
 	
