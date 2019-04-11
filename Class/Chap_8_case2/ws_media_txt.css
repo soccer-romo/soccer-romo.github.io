@@ -19,6 +19,21 @@ video{
   margin: 5px auto;
 }
 
+@media only screen and (min-width: 521px) {
+  video{
+    width: 360px;
+    float: right;
+    margin-right: 10px;
+  }
+
+}
 
 
 /* Track Styles */
+
+track{
+  font-family: sans-serif;
+  font-size: 1.3em;
+  color: rgb(221, 128, 160);
+  background-color: rgba(255, 225, 225, 0.8);
+}
