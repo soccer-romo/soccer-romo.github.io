@@ -21,6 +21,7 @@
   <link href="sb_reset.css" rel="stylesheet" />
   <link href="sb_styles.css" rel="stylesheet" />
   <link rel="stylesheet" href="sb_forms.css">
+  <link rel="stylesheet" href="sb_validate_txt.css">
   <script type="text/javascript" src="sb_script.js">
 
   </script>
@@ -51,51 +52,56 @@
       <fieldset id="billing">
         <legend>Billing Information(Required)</legend>
         <label id="firstBox" for="fName">First Name</label>
-          <input id="fName" name="fName" type="text" required>
+        <input id="fName" name="fName" type="text" required>
         <label id="lastBox" for="lName">Last Name </label>
-             <input id="lName" name="lName" type="text" required>
+        <input id="lName" name="lName" type="text" required>
 
         <label id="streetBox" for="street">Street Address</label>
-           <input id="street" name="street" type="text" required>
+        <input id="street" name="street" type="text" required>
         <label id="streetBox2" for="street2">Street Address (2)</label>
-           <input id="street2" name="street2" type="text">
+        <input id="street2" name="street2" type="text">
         <label id="cityBox" for="city">City</label>
-           <input id="city" name="city" type="text" required>
+        <input id="city" name="city" type="text" required>
         <label id="stateBox" for="state">State</label>
-           <input id="state" name="state" type="text" list="stateList" required>
+        <input id="state" name="state" type="text" list="stateList" required>
         <label id="zipBox" for="zip">ZIP/Postal Code</label>
-           <input id="zip" name="zip" type="text" pattern="^\d{5}(-\d{4})?$">
+        <input id="zip" name="zip" type="text" pattern="^\d{5}(-\d{4})?$">
         <label id="countryBox" for="country">Country</label>
-          <input id="country" name="country" type="text" value="United States" required>
+        <input id="country" name="country" type="text" value="United States" required>
         <label id="phoneBox" for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
+        <input id="phone" name="phone" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
       </fieldset>
       <fieldset id="creditCard">
         <legend>Credit Card(required)</legend>
         <fieldset>
-          <label id="amex" class="cardLabel">
+          <label for="amex" class="cardLabel">
             <input id="amex" type="radio" name="creditCard" value="amex">
-          <img src="sb_amex.png" alt="amex">
+            <img src="sb_amex.png" alt="amex">
           </label>
-          <label class="cardLabel">
-            <input id="cardLabel" type="radio" name="creditCard" value="discover">
+          <label for="discover" class="cardLabel">
+            <input id="discover" type="radio" name="creditCard" value="discover">
             <img src="sb_discover.png" alt="discover">
           </label>
-          <label for="creditCard" class="cardLabel" required>
-            <option value="master"></option>
+          <label for="master" class="cardLabel">
+            <input id="master" type="radio" name="creditCard" value="master">
             <img src="sb_master.png" alt="master">
           </label>
-          <label for="creditCard" class="cardLabel" required>
-            <option value="visa"></option>
+          <label for="visa" class="cardLabel">
+            <input id="visa" type="radio" name="creditCard" value="visa">
             <img src="sb_visa.png" alt="visa">
           </label>
         </fieldset>
       </fieldset>
-      <label for="">
-        Credit Card Number
-        <input id="cardBox" type="text" name="CreditCard" value="" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$">
-      </label>
+      <label id="cardNumber" for="cardBox">Credit Card Number</label>
+      <input id="cardBox" type="text" name="CreditCard" value="" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required>
+      <label for="cardMonth">Expiration Date</label>
+      <input id="cardMonth" type="text" name="months" placeholder="--Month--" list="monthList" required>
+      <input id="cardYear" type="text" name="years" placeholder="--Year--" list="yearList" required>
+      <label for="cscBox">CSC</label>
+      <input id="cscBox" type="text" name="cscBox" placeholder="nnn" pattern="^\d{3}$" maxlength="3" required>
+      <button type="submit"> <img src="sb_button.png" alt="Next"> </button>
     </form>
+
     <datalist id="stateList">
       <option value="Al"></option>
       <option value="AK"></option>
@@ -147,6 +153,27 @@
       <option value="WV"></option>
       <option value="WI"></option>
       <option value="WY"></option>
+    </datalist>
+    <datalist id="monthList">
+      <option value="January(01)"></option>
+      <option value="Febuary(02)"></option>
+      <option value="March(03)"></option>
+      <option value="April(04)"></option>
+      <option value="May(05)"></option>
+      <option value="June(06)"></option>
+      <option value="July(07)"></option>
+      <option value="August(08)"></option>
+      <option value="September(09)"></option>
+      <option value="October(10)"></option>
+      <option value="November(11)"></option>
+      <option value="December(12)"></option>
+    </datalist>
+    <datalist id="yearList">
+      <option value="2017"></option>
+      <option value="2018"></option>
+      <option value="2019"></option>
+      <option value="2020"></option>
+      <option value="2021"></option>
     </datalist>
     <aside>
       <h1>Menu Ideas</h1>
