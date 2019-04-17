@@ -7,14 +7,16 @@
 #3)
 
 import random
+def ask_number(low, high, step = 1):
+	low_num = low
+	high_num = high
+	step = step
+	num_range = random.randrange(low_num,high_num,step)
+	return num_range
+	
 
-def ask_number(question, low, high): 
-	"""Ask for a number within a range.""" 
-	response = None while response not in range(low, high): 
-	response = int(input(question))
-	return response
-
-user_guess = input("Guess my number between 0 and 10. You get three chances: ")
+low = int(input("What number do you want you lowest number to be? "))
+high = int(input("What number do you want you highest number to be? "))
 
 
 def guess_my_number(user_variable):
@@ -22,7 +24,7 @@ def guess_my_number(user_variable):
 	user_answer = "yes"
 
 	while (user_answer == "yes" or user_answer == "y"):
-		my_number = str(random.randrange(0,11))
+		my_number = str(random.randrange(low,high))
 		chances = 2
 		if (user_variable == my_number):
 			print("Good Job! You've guessed my number")
@@ -46,4 +48,4 @@ def guess_my_number(user_variable):
 			break
 
 
-guess_my_number(ask_number())
+guess_my_number(ask_number(low, high))

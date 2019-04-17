@@ -1,15 +1,13 @@
-def ask_number(question, low, high,step = 1): 
-	"""Ask for a number within a range.""" 
-	response = None 
-	while response not in range(low, high,step): 
-		response = int(input(question))
-	return response
+import random
+def ask_number(low, high, step = 1):
+	low_num = low
+	high_num = high
+	step = step
+	num_range = random.randrange(low_num,high_num,step)
+	return num_range
 	
-users_question = ("What is the range you want? Lowest # first and highest # second: ")
-print(users_question)
-low = int(input("Lowest: "))
-high = int(input("Highest: "))
-ask_number(users_question,low,high,step = 1)
 
+low = int(input("What number do you want you lowest number to be? "))
+high = int(input("What number do you want you highest number to be? "))
 
-
+print("Your number is: " + str(ask_number(low, high)))
