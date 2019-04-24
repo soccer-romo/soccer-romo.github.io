@@ -15,7 +15,7 @@ def answer(ran_num):
 	return answer
 
 def options():
-	options = {"A)":["Elements"],"B)":["Subscript"],"C)":["Parallel Arrays"],"D)":["8"]}
+	options = {"A)":["Elements"],"B)":["Subscript"],"C)":["Parallel Arrays"],"D)":["Two-Dimensional Array"]}
 	for l,a in options.items():
 		print(l,a[0])
 
