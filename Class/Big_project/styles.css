@@ -80,3 +80,10 @@ p {
 .skipNav a:focus{
   visibility: visible;
 }
+
+/*Hours layout*/
+
+table {
+  border: black;
+
+}
