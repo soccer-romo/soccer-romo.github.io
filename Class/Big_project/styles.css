@@ -54,10 +54,12 @@ p {
 .nav {
   background-color: #333;
   overflow: hidden;
+  text-align: right;
+  padding: 15px;
+  font-size: 150%;
 }
 
 .nav a {
-  float:left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -82,8 +84,16 @@ p {
 }
 
 /*Hours layout*/
+article > h2{
+  font-size: 300%;
+  text-align: left;
+  font: bold;
+}
 
-table {
-  border: black;
-
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 125%;
+  padding: 10px;
 }
