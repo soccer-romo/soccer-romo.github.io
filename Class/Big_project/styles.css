@@ -6,48 +6,43 @@
          Date:     April 27th 2019
          HTML5 and CSS3 Illustrated Final
 */
-
 /* reset styles */
 html {
   font-family: 'Ranga', cursive;
   font-size: 14px;
-  height:100%;
+  height: 100%;
 }
-article, aside, body, div, footer, header, h1, h2, h3, nav, p {
-   border: 0;
-   padding: 0;
-   margin: 0;
-  font-family: 'Lora', serif;
 
+article, aside, body, div, footer, header, h1, h2, h3, nav, p {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lora', serif;
 }
 
 /* body and page container */
-
-
 body {
-   font-family: Arial, Helvetica, sans-serif;
-   background-color: #a58855;
-
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #a58855;
 }
-
 
 p {
-   font-size: 1.2em;
+  font-size: 1.2em;
 }
 
-
-.video-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 }
-.video-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 /* Navigation menu*/
@@ -76,15 +71,17 @@ p {
   background-color: #4CAF50;
   color: white;
 }
-.skipNav{
+
+.skipNav {
   visibility: hidden;
 }
-.skipNav a:focus{
+
+.skipNav a:focus {
   visibility: visible;
 }
 
 /*Hours layout*/
-article > h2{
+article>h2 {
   font-size: 300%;
   text-align: left;
   font: bold;
@@ -98,9 +95,10 @@ table, th, td {
   padding: 10px;
 }
 
-.light{
+.light {
   background-color: #cbb99a;
 }
-.dark{
+
+.dark {
   background-color: #76613d;
 }
