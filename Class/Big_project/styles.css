@@ -26,8 +26,12 @@ body {
   background-color: #a58855;
 }
 .body{
+  margin-left: 200px;
   text-align: center;
   width: 75%;
+  border:2px solid black;
+  border-radius: 3px;
+  background-color: #876f45;
 }
 p {
   font-size: 1.2em;
@@ -81,9 +85,14 @@ p {
   background-color: #4CAF50;
   color: white;
 }
+.nav a.focus{
+  background-color: #4CAF50;
+  color: white;
+}
 
 .skipNav {
-  visibility: hidden;
+  position: relative;
+  left: -999px;
 }
 
 .skipNav a:focus {
@@ -106,16 +115,17 @@ table, th, td {
 }
 
 .light {
-  background-color: #cbb99a;
+  background-color: #baa278;
 }
 
 .dark {
-  background-color: #76613d;
+  background-color: #eee8dd;
 }
 
 /* Contact */
 fieldset{
-  width: 100%;
+  text-align: center;
+  width: 75%;
   font-size: 100%
 }
 
