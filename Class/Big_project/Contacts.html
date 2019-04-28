@@ -19,6 +19,34 @@
 			<a href="#">Location</a>
 			<a id="skipNav" href="#">Skip</a>
 		</div>
+    <article class="">
+      <h2>Contact Us</h2>
+      <form id="payment" action="index.html" method="post">
+        <fieldset>
+          <legend>Your Contact Info</legend>
+          <label id="firstBox" for="fName">First Name</label>
+          <input id="fName" type="text" name="fName" required>
+          <label id="lastBox" for="lName">Last Name </label>
+          <input id="lName" name="lName" type="text" required>
+          <label id="phoneBox" for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
+          <label for="emailA">Email Address</label>
+          <input id="emailA" type="text" name="emailA" required><br><br><br><br>
+          <label for="fromWho" class="heardList">How'd you hear about us?</label>
+          <input id="fromWho" type="text" name="heardUs" list="heardUs">
+        </fieldset>
+        <p>Please let us know why you've contacted us?</p>
+        <textarea name="name" rows="8" cols="80"></textarea><br>
+        <input type="submit" name="finished" >
+      </form>
+      <datalist id="heardUs">
+        <option value="Family"></option>
+        <option value="Friends"></option>
+        <option value="Work"></option>
+        <option value="Newspaper"></option>
+        <option value="Advertisments"></option>
+      </datalist>
+    </article>
 		<footer>Trusted Box Company &copy; 2019 Springfield, MO</footer>
 	</body>
 </html>
