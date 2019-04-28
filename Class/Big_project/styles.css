@@ -25,7 +25,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #a58855;
 }
-
+.body{
+  text-align: center;
+  width: 75%;
+}
 p {
   font-size: 1.2em;
 }
