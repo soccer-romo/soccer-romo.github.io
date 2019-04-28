@@ -97,3 +97,10 @@ table, th, td {
   font-size: 125%;
   padding: 10px;
 }
+
+.light{
+  background-color: #cbb99a;
+}
+.dark{
+  background-color: #76613d;
+}
