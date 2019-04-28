@@ -112,8 +112,8 @@ table, th, td {
 
 /* Contact */
 fieldset{
-  width: 400px;
-  font-size: 200%
+  width: 100%;
+  font-size: 100%
 }
 
 label {

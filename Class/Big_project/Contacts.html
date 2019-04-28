@@ -36,8 +36,9 @@
           <input id="fromWho" type="text" name="heardUs" list="heardUs">
         </fieldset>
         <p>Please let us know why you've contacted us?</p>
-        <textarea name="name" rows="8" cols="80"></textarea><br>
-        <input type="submit" name="finished" >
+        <textarea name="name" rows="8" cols="80" required></textarea><br>
+        <input id="submitButton" type="submit" name="finished" >
+        <input id="resetButton" type="reset" name="redo" >
       </form>
       <datalist id="heardUs">
         <option value="Family"></option>
