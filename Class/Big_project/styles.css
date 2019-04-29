@@ -67,12 +67,14 @@ footer {
 
 /* Skip Navigation*/
 .skipNav {
-  position: relative;
+  position: absolute;
   left: -999px;
 }
-.skipNav a.focus{
-  position: fixed;
-  left: 999px;
+.skipNav:focus{
+  position: relative;
+  left: 0px;
+  background-color: black;
+  color: white;
 }
 
 /* Navigation menu*/

@@ -51,7 +51,7 @@ class carTypes(object):
 		
 	def option3(colors):
 		colors = colors
-		colorChoices = {"1)":["Black"],"2)":["Green"],"3)":["Blue"],"4)":["Yellow"],"5)":["Purple"],"6)":["Red"],"7)":["Orange"],"8)":["White"],"9":["Brown"]}
+		colorChoices = {"1)":["Black"],"2)":["Green"],"3)":["Blue"],"4)":["Yellow"],"5)":["Purple"],"6)":["Red"],"7)":["Orange"],"8)":["White"],"9)":["Brown"]}
 		for n,c in colorChoices.items():
 			print(n,c[0])
 		return colorChoices
