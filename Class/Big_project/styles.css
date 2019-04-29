@@ -174,9 +174,10 @@ form#payment input, form#payment select {
 }
 
 @media only screen and (max-width: 600px) {
-  label {
-    text-align: left;
-  }
+  /*Aligning lables*/
+    label {
+      text-align: left;
+    }
 
   /* Dropdown Button */
   .dropbtn {
@@ -225,7 +226,7 @@ form#payment input, form#payment select {
   .skipNav{
     display: none;
   }
-  
+
 }
 
 @media print {
