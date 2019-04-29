@@ -65,6 +65,16 @@ footer {
   color: white;
 }
 
+/* Skip Navigation*/
+.skipNav {
+  position: relative;
+  left: -999px;
+}
+.skipNav a.focus{
+  position: fixed;
+  left: 999px;
+}
+
 /* Navigation menu*/
 .dropdown-content {
   background-color: #333;
@@ -97,18 +107,12 @@ footer {
   color: white;
 }
 
-.skipNav:focus {
-  position: relative;
-  left: -999px;
-  color: white;
-  background-color: black
-}
-
 /*Hours layout*/
-.Hours{
+.Hours {
   width: 75%;
   margin: 0px auto;
 }
+
 article>h2 {
   text-align: center;
   font-weight: bold;
@@ -162,6 +166,7 @@ form#payment input, form#payment select {
   float: left;
 }
 
+/*Media layout*/
 @media only screen and (min-width: 600px) {
   .dropbtn {
     display: none;
@@ -215,21 +220,29 @@ form#payment input, form#payment select {
   .dropdown:hover .dropbtn {
     background-color: black;
   }
+
+  /*Getting rid of skipNav*/
+  .skipNav{
+    display: none;
+  }
+  
 }
 
 @media print {
-  body{
+  body {
     background-color: white;
-    color:black;
+    color: black;
   }
-  .dropdown{
-    display: none;
-  }
-  .video-responsive{
-    display: none;
-  }
-  img{
+
+  .dropdown {
     display: none;
   }
 
+  .video-responsive {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
 }
