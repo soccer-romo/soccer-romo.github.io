@@ -105,9 +105,12 @@ footer {
 }
 
 /*Hours layout*/
+.Hours{
+  width: 75%;
+  margin: 0px auto;
+}
 article>h2 {
-  font-size: 300%;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
 }
 
@@ -115,8 +118,7 @@ table, th, td {
   border: 2px solid black;
   border-collapse: collapse;
   text-align: center;
-  font-size: 125%;
-  padding: 10px;
+  padding: 5px;
 }
 
 .light {
@@ -133,6 +135,7 @@ article {
 
 /* Contacts layout */
 fieldset {
+  margin: 0px auto;
   text-align: center;
   width: 75%;
   font-size: 100%
@@ -160,12 +163,15 @@ form#payment input, form#payment select {
 }
 
 @media only screen and (min-width: 600px) {
-  .dropbtn{
+  .dropbtn {
     display: none;
   }
-
 }
+
 @media only screen and (max-width: 600px) {
+  label {
+    text-align: left;
+  }
 
   /* Dropdown Button */
   .dropbtn {
@@ -177,7 +183,7 @@ form#payment input, form#payment select {
   }
 
   .dropdown {
-    float: left;
+    margin: auto 0px;
     position: relative;
     display: inline-block;
   }
@@ -207,5 +213,23 @@ form#payment input, form#payment select {
   }
 
   .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }}
+    background-color: black;
+  }
+}
+
+@media print {
+  body{
+    background-color: white;
+    color:black;
+  }
+  .dropdown{
+    display: none;
+  }
+  .video-responsive{
+    display: none;
+  }
+  img{
+    display: none;
+  }
+
+}
