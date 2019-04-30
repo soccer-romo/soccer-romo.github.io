@@ -168,6 +168,7 @@ form#payment input, form#payment select {
   float: left;
 }
 
+
 /*Media layout*/
 @media only screen and (min-width: 600px) {
   .dropbtn {
@@ -180,7 +181,9 @@ form#payment input, form#payment select {
     label {
       text-align: left;
     }
-
+  .body{
+    width: 100%;
+  }
   /* Dropdown Button */
   .dropbtn {
     background-color: #333;

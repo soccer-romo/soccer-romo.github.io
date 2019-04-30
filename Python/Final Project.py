@@ -56,6 +56,26 @@ class carTypes(object):
 			print(n,c[0])
 		return colorChoices
 
+class prices():
+	def car_price(car, total_price):
+		car = car
+		if (car == "1"):
+			total_price += 15000
+		if (car == "2"):
+			total_price += 17000
+		if (car == "3"):
+			total_price += 12000
+		if (car == "4"):
+			total_price += 30000
+		if (car == "5" ):
+			total_price += 10000
+		if (car == "6"):
+			total_price += 13000
+		if (car == "7"):
+			total_price += 70000
+
+total_price = 0
+
 cars = carTypes.carType()
 engines = carTypes.engineType()
 colors = carTypes.colorType()
