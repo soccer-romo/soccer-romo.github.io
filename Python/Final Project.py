@@ -12,9 +12,13 @@
 # 4) Spits out price for car
 class intros():
 	def intro1():
-		print("Hi everyone! This is a car picking application where you get to pick a car that we have on the lot. Hope you enjoy shopping for the car of your dreams!")
+		print("""Hi everyone! 
+This is a car picking application where you get to pick a car that we have on the lot.
+Hope you enjoy shopping for the car of your dreams!
+!Warning: If you do not type in the correct # it will not register the number!
+""")
 	def intro2():
-		print("First pick out the car you want by typing in the car's number that you want.")
+		print("""First pick out the car you want by typing in the car's number that you want.""")
 	
 	def intro3():
 		print("Second pick out the engine size that you want from the car.")
@@ -24,24 +28,27 @@ class intros():
 		
 class carTypes(object):
 	def cars():
-		carChoices = {"1)":["Ford"],"2)":["Chevy"],"3)":["Dodge"],"4)":["Mercedes"],"5)":["Nissan"],"6)":["Subaru"],"7)":["Ferrari"]}
+		carChoices = {"1)":["Ford:", "$15,000"],"2)":["Chevy:", "$17,000"],"3)":["Dodge:", "$12,000"],"4)":["Mercedes:", "$30,000"],"5)":["Nissan:", "$10,000"],"6)":["Subaru:", "$13,000"],"7)":["Ferrari:", "$70,000"]}
 		for n,m in carChoices.items():
-			print(n,m[0])
+			print(n,m[0],m[1])
 		carChoice = input("Number: ")
+		print("")
 		return carChoice
 	
 	def engines():
-		engineChoices = {"1)":["4-cylinder"],"2)":["V6"],"3)":["V8"],"4)":["V10"]}
+		engineChoices = {"1)":["4-cylinder", "$1,000"],"2)":["V6", "$2,000"],"3)":["V8", "$3,000"],"4)":["V10", "$4,000"]}
 		for n,e in engineChoices.items():
-			print(n,e[0])
+			print(n,e[0],e[1])
 		engineChoice = input("Number: ")
+		print("")
 		return engineChoice
 		
 	def colors():
-		colorChoices = {"1)":["Black"],"2)":["Green"],"3)":["Blue"],"4)":["Yellow"],"5)":["Purple"],"6)":["Red"],"7)":["Orange"],"8)":["White"],"9)":["Brown"]}
+		colorChoices = {"1)":["Black", "$300"],"2)":["Green", "$100"],"3)":["Blue", "$150"],"4)":["Yellow", "$50"],"5)":["Purple", "$50"],"6)":["Red", "$300"],"7)":["Orange", "$50"],"8)":["White", "$100"],"9)":["Brown", "$25"]}
 		for n,c in colorChoices.items():
-			print(n,c[0])
+			print(n,c[0],c[1])
 		colorChoice = input("Number: ")
+		print("")
 		return colorChoice
 		
 class Prices():
@@ -93,35 +100,27 @@ class Prices():
 		total_price = total_price
 		if (color == "1"):
 			total_price += 300
-			print("Total price so far: "+ str(total_price))
 		elif (color == "2"):
 			total_price += 100
-			print("Total price so far: "+ str(total_price))
 		elif (color == "3"):
 			total_price += 150
-			print("Total price so far: "+ str(total_price))
 		elif (color == "4"):
 			total_price += 50
-			print("Total price so far: "+ str(total_price))
 		elif (color == "5"):
 			total_price += 50
-			print("Total price so far: "+ str(total_price))
 		elif (color == "6"):
 			total_price += 300
-			print("Total price so far: "+ str(total_price))
 		elif (color == "7"):
 			total_price += 50
-			print("Total price so far: "+ str(total_price))
 		elif (color == "8"):
 			total_price += 100
-			print("Total price so far: "+ str(total_price))
 		elif (color == "9"):
 			total_price += 25
-			print("Total price so far: "+ str(total_price))
 		return total_price
 
 total_price = 0
-def main():
+def main(userExit):
+	userExit = userExit
 	intros.intro1()
 	intros.intro2()
 	car = carTypes.cars()
@@ -129,21 +128,22 @@ def main():
 
 	intros.intro3()
 	engine = carTypes.engines()
-	enginePrice = Prices.engine_prices(engine, total_price)
+	enginePrice = Prices.engine_prices(engine, carPrice)
 
 	intros.intro4()
 	color = carTypes.colors()
-	colorPrice = Prices.color_prices(color, total_price)
+	colorPrice = Prices.color_prices(color, enginePrice)
 
-	print("Your total price overall is: $" + str(carPrice + enginePrice + colorPrice))
+	print("Your total price overall is: $" + str(colorPrice))
+	
 	userExit = input("Do you still want to redo it? Type in yes or no: ").lower()
+	return userExit
 
 userExit = "yes"
 
 while (userExit == "yes" or userExit == "y"):
-	main()
-	if (userExit == "no" or userExit == "n"):
+	userExit = main(userExit)
+	print("--------------------------------------------------------")
+	while (userExit != "yes" or userExit != "y"):
 		print("Thank you for using the app!")
 		break
-	else:
-		userExit = input("Please type in yes or no: ").lower()
