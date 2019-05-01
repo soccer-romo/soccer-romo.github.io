@@ -36,7 +36,7 @@ class carTypes(object):
 		return carChoice
 	
 	def engines():
-		engineChoices = {"1)":["4-cylinder", "$1,000"],"2)":["V6", "$2,000"],"3)":["V8", "$3,000"],"4)":["V10", "$4,000"]}
+		engineChoices = {"1)":["4-cylinder:", "$1,000"],"2)":["V6:", "$2,000"],"3)":["V8:", "$3,000"],"4)":["V10:", "$4,000"]}
 		for n,e in engineChoices.items():
 			print(n,e[0],e[1])
 		engineChoice = input("Number: ")
@@ -44,7 +44,7 @@ class carTypes(object):
 		return engineChoice
 		
 	def colors():
-		colorChoices = {"1)":["Black", "$300"],"2)":["Green", "$100"],"3)":["Blue", "$150"],"4)":["Yellow", "$50"],"5)":["Purple", "$50"],"6)":["Red", "$300"],"7)":["Orange", "$50"],"8)":["White", "$100"],"9)":["Brown", "$25"]}
+		colorChoices = {"1)":["Black:", "$300"],"2)":["Green:", "$100"],"3)":["Blue:", "$150"],"4)":["Yellow:", "$50"],"5)":["Purple:", "$50"],"6)":["Red:", "$300"],"7)":["Orange:", "$50"],"8)":["White:", "$100"],"9)":["Brown:", "$25"]}
 		for n,c in colorChoices.items():
 			print(n,c[0],c[1])
 		colorChoice = input("Number: ")
@@ -57,25 +57,25 @@ class Prices():
 		total_price = total_price
 		if (car == "1"):
 			total_price += 15000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif (car == "2"):
 			total_price += 17000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif (car == "3"):
 			total_price += 12000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif (car == "4"):
 			total_price += 30000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif (car == "5" ):
 			total_price += 10000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif (car == "6"):
 			total_price += 13000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif (car == "7"):
 			total_price += 70000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		return total_price
 	
 	def engine_prices(engine, total_price):
@@ -83,16 +83,16 @@ class Prices():
 		total_price = total_price
 		if (engine == "1"):
 			total_price += 1000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif (engine == "2"):
 			total_price += 2000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif(engine == "3"):
 			total_price += 3000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		elif (engine == "4"):
 			total_price += 4000
-			print("Total price so far: "+ str(total_price))
+			print("Total price so far: $"+ str(total_price))
 		return total_price
 			
 	def color_prices(color, total_price):
