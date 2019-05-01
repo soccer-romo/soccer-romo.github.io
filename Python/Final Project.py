@@ -23,34 +23,19 @@ class intros():
 		print("Last but definitely not least. Pick out the colors you want from the color option.")
 		
 class carTypes(object):
-	def carType():
-		car_type = ["Ford","Chevy","Dodge","Mercedes","Nissan","Subaru","Ferrari"]
-		return car_type
-
-	def engineType():
-		enging_type = ["4-cylinder","V6", "V8", "V10"]
-		return enging_type
-		
-	def colorType():
-		color_type = ["Black","Green","Blue","Yellow","Purple","Red","Orange","White","Brown"]
-		return color_type
-		
-	def option1(cars):
-		cars = cars
+	def option1():
 		carChoices = {"1)":["Ford"],"2)":["Chevy"],"3)":["Dodge"],"4)":["Mercedes"],"5)":["Nissan"],"6)":["Subaru"],"7)":["Ferrari"]}
 		for n,m in carChoices.items():
 			print(n,m[0])
 		return 
 	
-	def option2(engines):
-		engines = engines
+	def option2():
 		engineChoices = {"1)":["4-cylinder"],"2)":["V6"],"3)":["V8"],"4)":["V10"]}
 		for n,e in engineChoices.items():
 			print(n,e[0])
 		return engineChoices
 		
-	def option3(colors):
-		colors = colors
+	def option3():
 		colorChoices = {"1)":["Black"],"2)":["Green"],"3)":["Blue"],"4)":["Yellow"],"5)":["Purple"],"6)":["Red"],"7)":["Orange"],"8)":["White"],"9)":["Brown"]}
 		for n,c in colorChoices.items():
 			print(n,c[0])
@@ -61,31 +46,67 @@ class prices():
 		car = car
 		if (car == "1"):
 			total_price += 15000
-		if (car == "2"):
+		elif (car == "2"):
 			total_price += 17000
-		if (car == "3"):
+		elif (car == "3"):
 			total_price += 12000
-		if (car == "4"):
+		elif (car == "4"):
 			total_price += 30000
-		if (car == "5" ):
+		elif (car == "5" ):
 			total_price += 10000
-		if (car == "6"):
+		elif (car == "6"):
 			total_price += 13000
-		if (car == "7"):
+		elif (car == "7"):
 			total_price += 70000
+		else:
+			print("Not a good value.")
+	
+	def engine_prices(engines, total_price):
+		engines = engines
+		total_price = total_price
+		if (engines == "1"):
+			total_price += 1000
+		elif (engines == "2"):
+			total_price += 2000
+		elif(engines == "3"):
+			total_price += 3000
+		elif (engines == "4"):
+			total_price += 4000
+		else:
+			print("Not a value")
+			engines = carTypes.option2(engines)
+			
+	def color_prices(color, total_price):
+		color = color
+		total_price = total_price
+		if (color == "1"):
+			total_price += 300
+		if (color == "2"):
+			total_price += 100
+		if (color == "3"):
+			total_price += 150
+		if (color == "4"):
+			total_price += 50
+		if (color == "5"):
+			total_price += 50
+		if (color == "6"):
+			total_price += 300
+		if (color == "7"):
+			total_price += 50
+		if (color == "8"):
+			total_price += 100
+		if (color == "9"):
+			total_price += 25
 
 total_price = 0
 
-cars = carTypes.carType()
-engines = carTypes.engineType()
-colors = carTypes.colorType()
 intros.intro1()
 intros.intro2()
-option1 = carTypes.option1(cars)
+option1 = carTypes.option1()
 intros.intro3()
-option2 = carTypes.option2(engines)
+option2 = carTypes.option2()
 intros.intro4()
-option3 = carTypes.option3(colors)
+option3 = carTypes.option3()
 
 
 #def pickingCar(cars):
