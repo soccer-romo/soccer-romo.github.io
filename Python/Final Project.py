@@ -69,8 +69,6 @@ class Prices():
 		elif (car == "7"):
 			total_price += 70000
 			print("Total price so far: "+ str(total_price))
-		else:
-			print("Not a good value.")
 		return total_price
 	
 	def engine_prices(engine, total_price):
@@ -88,9 +86,6 @@ class Prices():
 		elif (engine == "4"):
 			total_price += 4000
 			print("Total price so far: "+ str(total_price))
-		else:
-			print("Not a value")
-			engines = carTypes.option2(engines)
 		return total_price
 			
 	def color_prices(color, total_price):
@@ -123,8 +118,6 @@ class Prices():
 		elif (color == "9"):
 			total_price += 25
 			print("Total price so far: "+ str(total_price))
-		else:
-			print("Not a value")
 		return total_price
 
 total_price = 0
