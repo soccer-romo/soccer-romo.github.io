@@ -80,6 +80,10 @@ class Movement():
 			x,y = Movement.moveleft(rows,columns,x,y)
 		return x,y
 
+#Make walls on each side of the rows.
+
+
+
 userExit = "yes"
 print("You start out at (3,B). Good Luck! Use the w,a,s,d to guide yourself.")
 while (userExit == "yes"):
