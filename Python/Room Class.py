@@ -19,11 +19,13 @@
 
 rows = ["1","2","3"]
 columns = ["A","B","C"]
+locked = False
+opened = True 
+#start point
 x = 2
 y = 1
+
 class Room():
-	x = 2
-	y = 1
 	def section(rows, columns):
 		print("___________________")
 		print("|(" + rows[0]+","+columns[0]+")|(" +rows[0]+","+columns[1]+")|(" + rows[0]+","+columns[2]+")|")
@@ -35,6 +37,7 @@ class Room():
 	section(rows, columns)
 
 class Movement():
+
 	def moveUp(rows,columns,x,y):
 		x -=1
 		y = y
@@ -68,7 +71,6 @@ class Movement():
 		return x,y
 
 	def movement(x,y):
-		
 		userMovement = input("")
 		if (userMovement == "w"):
 			x,y = Movement.moveUp(rows, columns, x, y)
@@ -80,11 +82,10 @@ class Movement():
 			x,y = Movement.moveleft(rows,columns,x,y)
 		return x,y
 
-#Make walls on each side of the rows.
-
-
-
 userExit = "yes"
 print("You start out at (3,B). Good Luck! Use the w,a,s,d to guide yourself.")
 while (userExit == "yes"):
-	x,y = Movement.movement(x,y)
+	try:
+		x,y = Movement.movement(x,y)
+	except IndexError as e:
+		print("You've run into a wall.XX")
