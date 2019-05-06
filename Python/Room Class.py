@@ -25,7 +25,7 @@ opened = True
 x = 2
 y = 1
 
-class Room():
+class Board():
 	def section(rows, columns):
 		print("___________________")
 		print("|(" + rows[0]+","+columns[0]+")|(" +rows[0]+","+columns[1]+")|(" + rows[0]+","+columns[2]+")|")
@@ -43,7 +43,6 @@ class Movement():
 		y = y
 		row = rows[x]
 		column = columns[y]
-		print(row + ","+ column)
 		return x,y
 
 	def movedown(rows,columns,x,y):
@@ -51,7 +50,6 @@ class Movement():
 		y = y
 		row = rows[x]
 		column = columns[y]
-		print(row + ","+ column)
 		return x,y
 
 	def moveleft(rows,columns,x,y):
@@ -59,7 +57,6 @@ class Movement():
 		y += 1
 		row = rows[x]
 		column = columns[y]
-		print(row + ","+ column)
 		return x,y
 
 	def moveright(rows,columns,x,y):
@@ -67,9 +64,16 @@ class Movement():
 		y -= 1
 		row = rows[x]
 		column = columns[y]
+		return x,y
+		
+	def showPosition(rows,columns,x,y):
+		x = x
+		y = y
+		row = rows[x]
+		column = columns[y]
 		print(row + ","+ column)
 		return x,y
-
+		
 	def movement(x,y):
 		userMovement = input("")
 		if (userMovement == "w"):
@@ -81,11 +85,37 @@ class Movement():
 		elif (userMovement == "d"):
 			x,y = Movement.moveleft(rows,columns,x,y)
 		return x,y
+	
+	def borders(x,y):
+		x = x
+		y = y
+		if (x >= 3):
+			x -= 1
+			print("You've run into a wall.")
+		elif (x <= -1):
+			x += 1
+			print("You've run into a wall.")
+		elif (y <= -1):
+			y += 1
+			print("You've run into a wall.")
+		elif (y >= 3):
+			y -= 1
+			print("You've run into a wall.")
+		return x,y
+	
+
+def Room(rows, columns, x, y):
+	x,y = Movement.showPosition(rows, columns, x, y)
+	x,y = Movement.movement(x,y)		
+	x,y = Movement.borders(x,y)
+	return x,y
+
 
 userExit = "yes"
 print("You start out at (3,B). Good Luck! Use the w,a,s,d to guide yourself.")
 while (userExit == "yes"):
 	try:
-		x,y = Movement.movement(x,y)
+		x,y = Room(rows, columns, x, y)
 	except IndexError as e:
-		print("You've run into a wall.XX")
+		print("You've run into a wall.")
+	
