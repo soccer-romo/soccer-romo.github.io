@@ -119,3 +119,4 @@ while (userExit == "yes"):
 	except IndexError as e:
 		print("You've run into a wall.")
 	
+#use keys to set room as locked instead of creating walls. Just easier.
