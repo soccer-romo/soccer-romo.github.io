@@ -54,12 +54,12 @@ class Board():
 			print("You've run into a wall.")
 		return x,y
 		
-	def locked(door, unlocked, x,y):
-		if (x == 0 and y == 0 and door != unlocked):
+	def locked(doorPos, unlocked, x,y):
+		if (x == 0 and y == 0 and doorPos != unlocked):
 			x = 2
 			y = 1
 			print("Can't Enter. Please find key. You're now at the beginnning.")
-		if (x == 0 and y == 1 and door == unlocked):
+		if (x == 0 and y == 1 and doorPos == unlocked):
 			x = 0
 			y = 1
 		return x,y
@@ -144,8 +144,8 @@ class Room():
 	def spotInRoom(rows, columns, x, y):
 		x,y = Movement.showPosition(rows, columns, x, y)
 		x,y = Board.borders(x,y)
-		door = Board.key(door, unlocked, x, y)
-		x,y = Board.locked(door, unlocked, x, y)
+		doorPos = Board.key(door, unlocked, x, y)
+		x,y = Board.locked(doorPos, unlocked, x, y)
 		x,y = Movement.movement(x,y)		
 		x,y = Enemy.enemySpot(door,unlocked,x, y)
 		x,y = Board.Exit(x, y)
