@@ -76,9 +76,13 @@ class Prices():
 		elif (car == "7"):
 			total_price += 70000
 			print("Total price so far: $"+ str(total_price))
+		else:
+			print("Not a Valid number")
+			car = carTypes.cars()
+			total_price = Prices.car_price(car, total_price)
 		return total_price
 	
-	def engine_prices(engine, total_price):
+	def engine_prices(engine, total_price, carPrice):
 		engine = engine
 		total_price = total_price
 		if (engine == "1"):
@@ -93,9 +97,13 @@ class Prices():
 		elif (engine == "4"):
 			total_price += 4000
 			print("Total price so far: $"+ str(total_price))
+		else:
+			print("Not a Valid number")
+			engine = carTypes.engines()
+			total_price = Prices.engine_prices(engine, carPrice, carPrice)
 		return total_price
 			
-	def color_prices(color, total_price):
+	def color_prices(color, total_price, enginePrice):
 		color = color
 		total_price = total_price
 		if (color == "1"):
@@ -116,6 +124,10 @@ class Prices():
 			total_price += 100
 		elif (color == "9"):
 			total_price += 25
+		else:
+			print("Not a Valid number")
+			color = carTypes.colors()
+			total_price = Prices.color_prices(color, enginePrice, enginePrice)
 		return total_price
 
 total_price = 0
@@ -128,11 +140,11 @@ def main(userExit):
 
 	intros.intro3()
 	engine = carTypes.engines()
-	enginePrice = Prices.engine_prices(engine, carPrice)
+	enginePrice = Prices.engine_prices(engine, carPrice, carPrice)
 
 	intros.intro4()
 	color = carTypes.colors()
-	colorPrice = Prices.color_prices(color, enginePrice)
+	colorPrice = Prices.color_prices(color, enginePrice, enginePrice)
 
 	print("Your total price overall is: $" + str(colorPrice))
 	

@@ -16,11 +16,12 @@
 
 
 """Arron Burris, Alex Nguyen, David Niculcea, Tim Routen"""
+import sys
 
 rows = ["1","2","3"]
 columns = ["A","B","C"]
-locked = False
-opened = True 
+unlocked = True
+door = False
 #start point
 x = 2
 y = 1
@@ -35,7 +36,49 @@ class Board():
 		print("|(" + rows[2]+","+columns[0]+")|(" +rows[2]+","+columns[1]+")|(" + rows[2]+","+columns[2]+")|")
 		print("-------------------")
 	section(rows, columns)
-
+	
+	def borders(x,y):
+		x = x
+		y = y
+		if (x >= 3):
+			x -= 1
+			print("You've run into a wall.")
+		elif (x <= -1):
+			x += 1
+			print("You've run into a wall.")
+		elif (y <= -1):
+			y += 1
+			print("You've run into a wall.")
+		elif (y >= 3):
+			y -= 1
+			print("You've run into a wall.")
+		return x,y
+		
+	def locked(door, unlocked, x,y):
+		if (x == 0 and y == 0 and door != unlocked):
+			x = 2
+			y = 1
+			print("Can't Enter. Please find key. You're now at the beginnning.")
+		if (x == 0 and y == 1 and door == unlocked):
+			x = 0
+			y = 1
+		return x,y
+	
+	def key(door, unlocked, x, y):
+		door = door
+		if(x == 2 and y == 2):
+			door = True
+			print("GoodJob you've found the key!")
+		return door
+			
+	def Exit(x,y):
+		x = x
+		y = y
+		if (x == 0 and y == 1):
+			print("You've won! Congrats!")
+			sys.exit()
+		return x,y
+			
 class Movement():
 
 	def moveUp(rows,columns,x,y):
@@ -86,37 +129,38 @@ class Movement():
 			x,y = Movement.moveleft(rows,columns,x,y)
 		return x,y
 	
-	def borders(x,y):
+
+
+class Enemy():
+	def enemySpot(door, unlocked,x,y):
 		x = x
 		y = y
-		if (x >= 3):
-			x -= 1
-			print("You've run into a wall.")
-		elif (x <= -1):
-			x += 1
-			print("You've run into a wall.")
-		elif (y <= -1):
-			y += 1
-			print("You've run into a wall.")
-		elif (y >= 3):
-			y -= 1
-			print("You've run into a wall.")
+		if (x == 0 and y == 0 and door == unlocked):
+			print("enemy")
 		return x,y
-	
+			
 
-def Room(rows, columns, x, y):
-	x,y = Movement.showPosition(rows, columns, x, y)
-	x,y = Movement.movement(x,y)		
-	x,y = Movement.borders(x,y)
-	return x,y
+class Room():
+	def spotInRoom(rows, columns, x, y):
+		x,y = Movement.showPosition(rows, columns, x, y)
+		x,y = Board.borders(x,y)
+		door = Board.key(door, unlocked, x, y)
+		x,y = Board.locked(door, unlocked, x, y)
+		x,y = Movement.movement(x,y)		
+		x,y = Enemy.enemySpot(door,unlocked,x, y)
+		x,y = Board.Exit(x, y)
+		return x,y
+
+
 
 
 userExit = "yes"
 print("You start out at (3,B). Good Luck! Use the w,a,s,d to guide yourself.")
 while (userExit == "yes"):
 	try:
-		x,y = Room(rows, columns, x, y)
+		x,y = Room.spotInRoom(rows, columns, x, y)
+		
 	except IndexError as e:
 		print("You've run into a wall.")
-	
-#use keys to set room as locked instead of creating walls. Just easier.
+		
+#use keys to set room as locked instead of creating walls. Just easier. [(x = ?) (y = ?) = set spots]
