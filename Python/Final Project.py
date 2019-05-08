@@ -15,7 +15,6 @@ class intros():
 		print("""Hi everyone! 
 This is a car picking application where you get to pick a car that we have on the lot.
 Hope you enjoy shopping for the car of your dreams!
-!Warning: If you do not type in the correct # it will not register the number!
 """)
 	def intro2():
 		print("""First pick out the car you want by typing in the car's number that you want.""")
