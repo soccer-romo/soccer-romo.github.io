@@ -23,16 +23,15 @@ article, aside, body, div, footer, header, h1, h2, h3, nav, p {
 /* body and page container */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #4d8080;
+  background-color: #4d6619;
 }
 
 .body {
   margin: 0px auto;
-  text-align: center;
   width: 75%;
   border: 2px solid black;
   border-radius: 3px;
-  background-color:#70a9a9;
+  background-color:#6b8e23;
 }
 
 p {
@@ -55,11 +54,26 @@ p {
 }
 
 #logo {
-  height: 200px;
-  width: 200px;
-  border: 2px dotted black;
-  position:relative;
-  right: 500px;
+  height: 50px;
+  width: 225px;
+  padding-top: 20px;
+}
+
+.Searchbar input[type=text]{
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+.Searchbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 footer {
@@ -84,7 +98,7 @@ footer {
 .dropdown-content {
   background-color: #333;
   overflow: hidden;
-  text-align: left;
+  text-align: right;
   padding: 15px;
   font-size: 150%;
 }
