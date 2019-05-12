@@ -17,16 +17,20 @@
 
 """Arron Burris, Alex Nguyen, David Niculcea, Tim Routen"""
 import sys
+import time
 
 rows = ["1","2","3"]
 columns = ["A","B","C"]
+locked = False
 unlocked = True
-door = False
 #start point
 x = 2
 y = 1
 
 class Board():
+	def __init__(self,door = True):
+		self.door_unlocked = door
+	
 	def section(rows, columns):
 		print("___________________")
 		print("|(" + rows[0]+","+columns[0]+")|(" +rows[0]+","+columns[1]+")|(" + rows[0]+","+columns[2]+")|")
@@ -36,6 +40,9 @@ class Board():
 		print("|(" + rows[2]+","+columns[0]+")|(" +rows[2]+","+columns[1]+")|(" + rows[2]+","+columns[2]+")|")
 		print("-------------------")
 	section(rows, columns)
+	
+	def lock(self):
+		self.door_unlocked = not self.door_unlocked
 	
 	def borders(x,y):
 		x = x
@@ -53,27 +60,25 @@ class Board():
 			y -= 1
 			print("You've run into a wall.")
 		return x,y
-		
-	def locked(doorPos, unlocked, x,y):
+	
+	def locked(door1, locked, unlocked, x,y):
 		x=x
 		y=y
-		if (x == 0 and y == 0 and doorPos != unlocked):
+		if (x == 0 and y == 0 and door1 == locked):
 			x = 2
 			y = 1
 			print("Can't Enter. Please find key. You're now at the beginnning.")
-		if (x == 0 and y == 0 and doorPos == unlocked):
+		elif (x == 0 and y == 0 and door1 == unlocked):
 			x = 0
-			y = 1
+			y = 0
+			import Enemy_Class
 		return x,y
 	
-	def key(door, unlocked, x, y):
-		door = door
+	def key(locked, unlocked, x, y):
 		if(x == 2 and y == 2):
-			door = True
 			print("GoodJob you've found the key!")
-		return door
 			
-	def Exit(doorpos , unlocked, x,y):
+	def Exit(x,y):
 		x = x
 		y = y
 		if (x == 0 and y == 1):
@@ -130,27 +135,17 @@ class Movement():
 		elif (userMovement == "d"):
 			x,y = Movement.moveleft(rows,columns,x,y)
 		return x,y
-	
-
-
-class Enemy():
-	def enemySpot(door, unlocked,x,y):
-		x = x
-		y = y
-		if (x == 0 and y == 0 and door == unlocked):
-			print("enemy")
-		return x,y
 			
 
 class Room():
 	def spotInRoom(rows, columns, x, y):
 		x,y = Movement.showPosition(rows, columns, x, y)
+		x,y = Movement.movement(x,y)
 		x,y = Board.borders(x,y)
-		doorPos = Board.key(door, unlocked, x, y)
-		x,y = Board.locked(doorPos, unlocked, x, y)
-		x,y = Movement.movement(x,y)		
-		x,y = Enemy.enemySpot(door,unlocked,x, y)
-		x,y = Board.Exit(doorPos, unlocked, x, y)
+		door1 = Board.key(locked, unlocked, x, y)
+		print(door1)
+		x,y = Board.locked(door1,locked, unlocked, x, y)		
+		x,y = Board.Exit(x, y)
 		return x,y
 
 
