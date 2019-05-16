@@ -21,8 +21,10 @@ import time
 
 rows = ["1","2","3"]
 columns = ["A","B","C"]
+global door
 locked = False
 unlocked = True
+door = locked
 #start point
 x = 2
 y = 1
@@ -40,10 +42,7 @@ class Board():
 		print("|(" + rows[2]+","+columns[0]+")|(" +rows[2]+","+columns[1]+")|(" + rows[2]+","+columns[2]+")|")
 		print("-------------------")
 	section(rows, columns)
-	
-	def lock(self):
-		self.door_unlocked = not self.door_unlocked
-	
+		
 	def borders(x,y):
 		x = x
 		y = y
@@ -61,21 +60,21 @@ class Board():
 			print("You've run into a wall.")
 		return x,y
 	
-	def locked(door1, locked, unlocked, x,y):
+	def locked(locked, unlocked, x,y):
 		x=x
 		y=y
-		if (x == 0 and y == 0 and door1 == locked):
+		if (x == 0 and y == 0 and door == unlocked):
+			x = 0
+			y = 0
+		elif (x == 0 and y == 0):
 			x = 2
 			y = 1
 			print("Can't Enter. Please find key. You're now at the beginnning.")
-		elif (x == 0 and y == 0 and door1 == unlocked):
-			x = 0
-			y = 0
-			import Enemy_Class
 		return x,y
 	
 	def key(locked, unlocked, x, y):
 		if(x == 2 and y == 2):
+			door = unlocked
 			print("GoodJob you've found the key!")
 			
 	def Exit(x,y):
@@ -142,9 +141,8 @@ class Room():
 		x,y = Movement.showPosition(rows, columns, x, y)
 		x,y = Movement.movement(x,y)
 		x,y = Board.borders(x,y)
-		door1 = Board.key(locked, unlocked, x, y)
-		print(door1)
-		x,y = Board.locked(door1,locked, unlocked, x, y)		
+		door = Board.key(locked, unlocked, x, y)
+		x,y = Board.locked(locked, unlocked, x, y)		
 		x,y = Board.Exit(x, y)
 		return x,y
 
