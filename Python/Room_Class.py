@@ -15,7 +15,6 @@
 #Use numbers by adding and subtracting to move across the board
 
 
-"""Arron Burris, Alex Nguyen, David Niculcea, Tim Routen"""
 import sys
 import time
 
