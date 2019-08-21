@@ -1,0 +1,51 @@
+/*
+  Author: David Niculcea
+  Date:08/19/2019
+  Project: About Me
+*/
+/*Body structure and font style*/
+body
+{
+  background-color: white;
+}
+
+.body {
+  margin: 0px auto;
+  text-align: center;
+  width: 75%;
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+}
+.dropdown
+{
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  overflow-x: hidden;
+  text-align: left;
+  background-color: darkgrey;
+  padding: 15px;
+}
+body > div > div > a
+{
+  text-decoration: none;
+  color: black;
+  padding: 15px 10px;
+  font-size: 150%;
+}
+
+body > div > div > a:active
+{
+  
+}
+
+body > div > div > a:hover
+{
+ background-color: lightgrey;
+}
+.footer
+{
+  position: relative;
+  bottom: 0;
+
+}
