@@ -62,3 +62,23 @@ ul, #aboutME
   font-weight: bold;
   font-size: 20px;
 }
+
+/*Grid Layout*/
+
+.item1
+{
+  width: 30%;
+}
+.item2
+{
+  width: 70%;
+}
+
+.item3
+{
+  width: 30%
+}
+.item5
+{
+  width: 70%;
+}
