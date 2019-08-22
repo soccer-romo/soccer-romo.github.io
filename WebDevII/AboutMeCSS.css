@@ -4,15 +4,14 @@
   Project: About Me
 */
 /*Body structure and font style*/
-body
-{
+body {
   background-color: white;
 }
 
-.Beginning
-{
+.Beginning {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
 .body {
   margin: 0px auto;
   text-align: center;
@@ -21,40 +20,38 @@ body
   color: white;
   border-radius: 12px;
 }
-.dropdown
-{
+
+ul, #aboutME {
+  padding-left: 40%;
+  text-align: left !important;
+}
+
+/*Navigation Bar*/
+.dropdown {
   border: 2px solid skyblue;
   border-radius: 10px;
   text-align: left;
   background-color: darkgrey;
   padding: 15px;
 }
-body > div > div > a
-{
+
+body>div>div>a {
   text-decoration: none;
   color: black;
   padding: 15px 10px;
   font-size: 150%;
 }
 
-body > div > div > a:active
-{
+body>div>div>a:active {
   color: black;
 }
 
-body > div > div > a:hover
-{
- background-color: lightgrey;
+body>div>div>a:hover {
+  background-color: lightgrey;
 }
 
-ul, #aboutME
-{
-  padding-left:40%;
-  text-align: left !important;
-}
 /*Image SetUp*/
-.lang
-{
+.lang {
   margin: 0px auto;
   padding-left: 23%;
   word-spacing: 2500%;
@@ -64,21 +61,18 @@ ul, #aboutME
 }
 
 /*Grid Layout*/
-
-.item1
-{
+.item1 {
   width: 30%;
 }
-.item2
-{
+
+.item2 {
   width: 70%;
 }
 
-.item3
-{
+.item3 {
   width: 30%
 }
-.item5
-{
+
+.item5 {
   width: 70%;
 }
