@@ -9,6 +9,10 @@ body
   background-color: white;
 }
 
+.Beginning
+{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 .body {
   margin: 0px auto;
   text-align: center;
@@ -43,21 +47,18 @@ body > div > div > a:hover
  background-color: lightgrey;
 }
 
-footer
+ul, #aboutME
 {
-  position: fixed;
-  bottom: 0px;
-  left: 12.5%;
+  padding-left:40%;
+  text-align: left !important;
 }
-
 /*Image SetUp*/
 .lang
 {
   margin: 0px auto;
-  overflow: hidden;
-  text-align: center;
-}
-img
-{
-  padding: auto;
+  padding-left: 23%;
+  word-spacing: 2500%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
 }
