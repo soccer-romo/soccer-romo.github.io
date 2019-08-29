@@ -1,0 +1,119 @@
+/*
+  Author: David Niculcea
+  Date:08/19/2019
+  Project: About Me
+*/
+/*Body structure and font style*/
+body {
+  background-color: white;
+}
+
+.Beginning {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.body {
+  margin: 0px auto;
+  text-align: center;
+  width: 75%;
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+}
+
+ul, #aboutME {
+  padding-left: 40%;
+  text-align: left !important;
+}
+
+.places{
+  text-decoration: underline;
+}
+
+/*Navigation Bar*/
+.dropdown {
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  text-align: left;
+  background-color: darkgrey;
+  padding: 15px;
+}
+
+body>div>div>a {
+  text-decoration: none;
+  color: black;
+  padding: 15px 10px;
+  font-size: 150%;
+}
+
+body>div>div>a:active {
+  color: black;
+}
+
+body>div>div>a:hover {
+  background-color: lightgrey;
+}
+
+/*Image SetUp*/
+.lang {
+  margin: 0px auto;
+  padding-left: 23%;
+  word-spacing: 2500%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#monument{
+  width: 30%;
+}
+#congress{
+  width: 53.3%;
+  height: 50%;
+}
+#whiteHouse{
+  width: 50%;
+  height: 50%;
+}
+#lincoln{
+  width: 28.1%;
+  height: 30%;
+}
+#hike{
+  width: 30%;
+}
+#hikeView{
+  width: 85%;
+}
+#volleyball{
+  width: 30%;
+}
+#ship{
+  width: 30%;
+
+}
+#detroit{
+  width: 30%;
+
+}
+#lakeMichigan{
+  width: 90%;
+
+}
+
+/*Grid Layout*/
+.item1 {
+  width: 30%;
+}
+
+.item2 {
+  width: 70%;
+}
+
+.item3 {
+  width: 30%
+}
+
+.item5 {
+  width: 70%;
+}
