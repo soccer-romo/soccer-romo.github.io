@@ -19,3 +19,9 @@ var image4 = document.getElementById('whiteHouse');
         {
             document.getElementById('mainImage').src = image
         }
+
+        document.getElementById('mainImage').addEventListener('dblclick',newImages)
+        function newImages()
+        {
+            document.getElementById('congress').src = src=""
+        }
