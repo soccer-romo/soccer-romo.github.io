@@ -17,11 +17,14 @@ var image4 = document.getElementById('whiteHouse');
 
         function imageSwap(image)
         {
-            document.getElementById('mainImage').src = image
+            main.src = image
         }
 
         document.getElementById('mainImage').addEventListener('dblclick',newImages)
         function newImages()
         {
-            document.getElementById('congress').src = src=""
+            image1.src = "image/detroit.jpeg"
+            image2.src = "image/band.png"
+            image3.src = "image/ship.jpeg"
+            image4.src = "image/soccer.jpeg"
         }
