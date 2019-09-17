@@ -23,5 +23,5 @@ var image4 = document.getElementById('whiteHouse');
         document.getElementById('mainImage').addEventListener('dblclick',newImages)
         function newImages()
         {
-            document.getElementById('congress').src = src=""
+            document.getElementById('congress').src = document.getElementById('detorit').src
         }
