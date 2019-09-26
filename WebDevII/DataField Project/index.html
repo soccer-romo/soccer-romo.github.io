@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="thankYou.html" method="get">
+    <label for="userName">Username: </label>
+    <input type="text" name="userName">
+    <label for="email">Email: </label>
+    <input type="email" name="email">
+    <label for="phoneNum">Phone: </label>
+    <input type="tel" name="phoneNum">
+    <label for="contact">Best Way To Contact: </label>
+    <select name="contact" id="bestContact"></select>
+    <input type="button" value="Submit" onclick="valForm(this.form,true)">
+    <div id="error1"></div>
+    <div id="error2"></div>
+    <div id="error3"></div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

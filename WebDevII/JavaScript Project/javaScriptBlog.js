@@ -71,7 +71,7 @@ function arraySwapImage(_array1, array2)
 //This changes the main set of images to the first set of images
 function primaryImages()
 {
-    for (var i = 0; i < 4; i++)
+    for (var i = 0; i < displayImage1.length; i++)
     {
         arraySwapImage(displayedImages[i],displayImage1[i]);
     }  
@@ -79,7 +79,7 @@ function primaryImages()
 //This changes the main set of images to the second set of images
 function secondaryImages()
 {
-    for (var i = 0; i < 4; i++)
+    for (var i = 0; i < displayImage2.length; i++)
     {
         arraySwapImage(displayedImages[i],displayImage2[i]);
     }      
@@ -93,20 +93,33 @@ document.getElementById('mainImage').addEventListener('click',chooseImageArray);
 // document.getElementById('mainImage').addEventListener('click',primaryImages);
 // document.getElementById('mainImage').addEventListener('click',secondaryImages);
 
+
+//----------------Needs Work----------//
 //Checks to see which set of images are displayed and changes to oppisite set for the click event
+
+var _firstImage = displayedImages[0];
 function chooseImageArray()
 {
-    if(displayedImages[0].src == "file:///Users/davids/Documents/GitHub/soccer-romo.github.io/WebDevII/JavaScript%20Project/images/PoncaVeiw.jpeg"){
+    //doesn't work :(
+    if(displayedImages[0].src == displayImage1[0]){
         secondaryImages();
     }
-    else if(displayedImages[0].src == "file:///Users/davids/Documents/GitHub/soccer-romo.github.io/WebDevII/JavaScript%20Project/images/band.png"){
+    else if(displayedImages[0].src == displayImage2[0]){
         primaryImages();
     }
-    else console.log(displayedImages[0].src);
+    else 
+    {
+        console.log(displayedImages[0].src);
+        console.log(displayImage1[0]);
+    }
 }
+//--------------------------------------//
+
 
 var imageNum = -1;
 setInterval(imageInterval,3000)
+
+
 
 function timedSwappableImage(image)
 {
@@ -120,6 +133,7 @@ function imageInterval()
     
     if (imageNum == 3) 
     {
+        //from line 101
         chooseImageArray();
         imageNum = -1;
     }
