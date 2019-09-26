@@ -23,6 +23,7 @@ var image4 = document.getElementById('whiteHouse');
         document.getElementById('mainImage').addEventListener('dblclick',newImages)
         function newImages()
         {
+            document.getElementById('congress').src = document.getElementById('detorit').src
             image1.src = "image/detroit.jpeg"
             image2.src = "image/band.png"
             image3.src = "image/ship.jpeg"
