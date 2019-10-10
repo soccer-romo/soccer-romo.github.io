@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Developer: David Niculcea
+        Date: 10/10/19
+        Project: Address Book Project
+        Purpopse: Create Address book using Objects
+     -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Address Book</title>
+</head>
+<body>
+    <h1>Contacts</h1>
+    <h2 id="contacts"></h2>
+    <form>
+        <p id="FirstP"></p>
+        <p id="LastP"></p>
+        <p id="PhoneP"></p>
+        <p id="EmailP"></p>
+        <img id="contactImg" src="" alt="">
+    </form>
+    <form>
+        <label for="fName">First Name:</label>
+        <input type="text" id="fName"  required>
+        <label for="lName">Last Name:</label>
+        <input type="text" id="lName" required>
+        <label for="phoneNum">Phone</label>
+        <input type="text" id="phoneNum">
+        <label for="email" >Email:</label>
+        <input type="text" id="email" placeholder="janedoe@gmail.com" type="email" required>
+        <button type="button" onclick="formSubmit()">Update</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
