@@ -15,26 +15,35 @@
     <title>Address Book</title>
 </head>
 <body>
-    <h1>Contacts</h1>
-    <h4 id="contacts"></h4>
-    <form>
-        <div id="contactInfo"></div>
-        <p id="FirstP"></p>
-        <p id="LastP"></p>
-        <p id="PhoneP"></p>
-        <p id="EmailP"></p>
-        <img id="contactImg" src="" alt="">
+    <form  id="ContactNames">
+        <fieldset>
+            <legend>Contacts</legend>
+            <h4 id="contacts"></h4>
+        </fieldset>
     </form>
-    <form>
-        <label for="fName">First Name:</label>
-        <input type="text" id="fName"  required>
-        <label for="lName">Last Name:</label>
-        <input type="text" id="lName" required>
-        <label for="phoneNum">Phone</label>
-        <input type="text" id="phoneNum">
-        <label for="email" >Email:</label>
-        <input type="text" id="email" placeholder="janedoe@gmail.com" type="email" required>
-        <button type="button" onclick="formSubmit()">Update</button>
+    
+    <form id="contactInfo">
+        <fieldset>
+            <legend>Contact Info</legend>
+            <img id="contactImg" src="images/generic.jpg" alt="Contact Image">
+            <p id="NameP">Name: Jane Doe</p>
+            <p id="PhoneP">Phone: 123-123-1234</p>
+            <p id="EmailP">Email: janeDoe5@gmail.com</p>
+        </fieldset>
+    </form>
+    <form id="addContact">
+        <fieldset>
+            <legend>Add Contact</legend>
+            <label for="fName">First Name:</label>
+            <input type="text" id="fName"  required>
+            <label for="lName">Last Name:</label>
+            <input type="text" id="lName" required>
+            <label for="phoneNum">Phone</label>
+            <input type="text" id="phoneNum" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="janedoe@gmail.com" type="email" required>
+            <button id="addContact" type="button" onclick="valForm(this.form,true)">Add</button>
+        </fieldset>
     </form>
     <script src="script.js"></script>
 </body>
