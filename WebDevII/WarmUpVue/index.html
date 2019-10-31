@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Warm-Up Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <p v-show = "cartItem > 0" >Cart Items: {{cartItem}}</p>
+        <p>{{itemSelected}}</p>
+
+        <div v-for = "item in items">
+            <p @click = "updateSelected(item.name)">{{item.name}}</p>
+            <img v-bind:src = "item.imgSrc" v-bind:alt="item.name">
+            <p>{{item.name}} Order: {{item.ordered}}</p>
+            <button @click = "orderThis(item)">Order {{item.name}}</button>
+            <button v-show = "item.ordered > 0" @click = "removeThis(item)">Remove One: {{item.name}}</button>
+
+        </div>
+
+        <div></div>
+    </div>
+    <script>
+    var store = new Vue(
+        {
+            el: "#app",
+            data:
+            {
+                items:[
+                    {name: "Red Light", ordered:0, imgSrc:"images/redlight.png"},
+                    {name: "Green Light", ordered: 0, imgSrc: "images/greenlight.png"}
+                ],
+                cartItem: 0,
+                itemSelected: "None Selected"
+            },// end of data
+
+            methods:{
+                updateSelected(theName)
+                {
+                    this.itemSelected = theName
+                },
+                orderThis(anObj)
+                {
+                    anObj.ordered++;
+                    this.cartItem++;
+                    this.itemSelected = anObj.name
+                },
+                removeThis(anObj)
+                {
+                    anObj.ordered--;
+                    this.cartItem--;
+                    this.itemSelected = "Removed one: " + anObj.name
+                }
+            }
+        } // end of instance
+
+    )  //end of var vue
+    </script>
+</body>
+</html>

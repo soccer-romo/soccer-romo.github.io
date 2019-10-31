@@ -1,0 +1,24 @@
+#ben10Image
+{
+    width: 100px; 
+    position: absolute;
+    border-right: 1px solid black;
+}
+
+#einstieinImage
+{
+    width: 100px; 
+    position: absolute;
+    border-right:1px solid black;
+}
+
+#line
+{
+    position: relative;
+    left: 873px;
+    top: 10px;
+}
+#stoplight
+{
+    height: 200px;
+}
