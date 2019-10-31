@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Students>
+  <Student>
+    <FName>Joy</FName>
+    <LName>Smith</LName>
+    <Major>CIS</Major>
+    <Gpa>3.94</Gpa>
+  </Student>
+  <Student>
+    <FName>Sam</FName>
+    <LName>Jones</LName>
+    <Major>CIS</Major>
+    <Gpa>3.93</Gpa>
+  </Student>
+  <Student>
+    <FName>John</FName>
+    <LName>Shue</LName>
+    <Major>MATH</Major>
+    <Gpa>3.90</Gpa>
+  </Student>
+</Students>
