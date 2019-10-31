@@ -1,0 +1,30 @@
+#titleDiv
+{
+    position: relative;
+    left: 35%;
+}
+#title
+{
+    width: 30%;
+    text-align: center;
+    font-size: 500%;;
+    border: 5px dotted deepskyblue;
+}
+#desc
+{
+    text-align: center;
+    font-size: xx-large;
+    font-size-adjust: inherit;
+}
+.movies
+{
+    display: inline-block;
+    padding-right: 5%;;
+}
+#nowPlaying
+{
+    text-align: center;
+    width: 70%;
+    position: relative;
+    left: 15%;
+}

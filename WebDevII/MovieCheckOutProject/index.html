@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angel's Movie Theater</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="titleDiv">
+        <h1 id="title">Angel's Movie Theater</h1>
+    </div>
+    <p id="desc">Where you can order the top three Angel's rated movies</p>
+    <div id="nowPlaying">
+        <div id="topThree">
+            <div class="movies" v-for = "movie in movies">
+                <img class="topRatedMoviesImg" width="550px" v-bind:src = "movie.imgSrc" v-bind:alt="movie.title">
+                <h1>{{movie.title}}</h1>
+                <h3>"{{movie.desc}}" <br>
+                    Price: ${{movie.price}} In-Store: {{movie.inStore}} <br>
+                    Qty: {{movie.qty}}</h3>
+                <button v-show = "movie.inStore > 0" @click = "addItem(movie)">+</button>
+                <button v-show = "movie.qty > 0" @click = "removeItem(movie)">-</button>
+                <hr>
+                <br>
+            </div>
+            <h2>CartItems: {{itemsCart}}     CartPrice: ${{total}} </h2>
+        </div>
+    </div>
+
+    <script>
+        var moviesPlaying = new Vue(
+            {
+                el: "#nowPlaying",
+                data:
+                {
+                    movies:
+                    [
+                        {title: "Joker", desc: "A joker of evil orgin",
+                         inStore: 5, qty: 0, imgSrc: "images/joker.jpg", price: 13.50},
+
+                        {title: "Gemini Man",desc: "A younger Will Smith fights older Will. Who has/is the stronger Will.",
+                         inStore: 9, qty: 0, imgSrc: "images/geminiMan.jpg", price: 5.50},
+
+                        {title: "Avengers: Endgame",desc: "The world ended but is now back!",
+                         inStore: 3, qty: 0, imgSrc: "images/Endgame.jpg", price: 15.00}
+                    ],
+                    itemsCart: 0,
+                    total: 0,
+                    message: ""
+                },
+                methods:
+                {
+                    addItem(anObj)
+                    {
+                        this.itemsCart++;
+                        anObj.qty++;
+                        anObj.inStore--;
+                        this.total += anObj.price;
+                    },
+                    removeItem(anObj)
+                    {
+                        this.itemsCart--;
+                        anObj.qty--;
+                        anObj.inStore++;
+                        this.total -= anObj.price;
+                    }
+                }
+            }
+        )     
+        </script>
+        
+</body>
+</html>
+
+<!-- // var httpRequest = new XMLHttpRequest();
+// httpRequest.open("get", "https://api.themoviedb.org/3/movie/now_playing?api_key=9b362e3e690674bb239092bc71c6c0a8&language=en-US&page=1")
+// httpRequest.send(null)
+
+// httpRequest.onreadystatechange = aFunction;
+
+// function aFunction()
+// {
+//     if(httpRequest.readyState == 4 && httpRequest.status == 200)
+//     {
+//         var movies = httpRequest.responseText;
+        
+//         var jsObject = JSON.parse(movies);
+        
+
+//         for (var i = 0; i < jsObject.results.length; i++)
+//         {
+//             var sec = document.createElement('SECTION');
+//             var title = document.createElement('H1');
+//             var desc = document.createElement("P");
+//             desc.innerHTML = jsObject.results[i].overview;
+//             title.innerHTML = jsObject.results[i].title;
+
+//             sec.appendChild(title);
+//             sec.appendChild(desc);
+//             document.getElementById('nowPlaying').appendChild(sec);
+//         }
+        
+//     }
+// } -->

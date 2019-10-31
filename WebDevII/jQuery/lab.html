@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+            $(document).ready( () =>{
+                    $.ajax({url:"https://api.themoviedb.org/3/movie/now_playing?api_key=9b362e3e690674bb239092bc71c6c0a8&language=en-US&page=1", 
+                    success: function (result)
+                    {
+                        //$("#h1").text(result.results[0].original_title)
+                        var h1 = document.createElement("h1")
+                        h1.innerHTML = result.results[0].title;
+                        h1.className = 3
+                        h1.id = 3
+                        $('#movie').append(h1)
+
+                        $(document).delegate('h1','click',function(event){
+                            var theId = "#" + event.target.id;
+                            $(theId).toggle(3000)
+                        })
+                    }});
+
+                    $('h1').click(function(event){
+                        //alert(event.target)
+
+                        var theId = "#" + event.target.id;
+                        $(theId).toggle(3000)
+
+                    })
+                
+            })
+    </script>
+</head>
+<body>
+    <h1 id="0">Donatello</h1>
+    <p class="0"> Here is paragraph 1</p>
+    <h1 id="1">Leo</h1>
+    <p class="1">Here is Paragraph 2</p>
+
+    <div id="h1"></div>
+
+    <section id="movie"></section>
+</body>
+</html>
