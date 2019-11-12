@@ -16,6 +16,7 @@
 
 
 
+//--------WORKS BUT NOT AS REQUESTED---------//
 
 // var httpsMovieRequest = new XMLHttpRequest();
 // httpsMovieRequest.open('get',"https://api.themoviedb.org/3/movie/now_playing?api_key=9b362e3e690674bb239092bc71c6c0a8&language=en-US&page=1")
@@ -67,6 +68,7 @@
 // }
 
 
+//The is the inner part of the slot from the parent component so that way I can arrange it better with CSS and practice with child component
 Vue.component('sectionlist',{
     props:["themovies"],
     template: `
@@ -94,11 +96,15 @@ var movied = new Vue(
     {
         el: "#Movie",
         data:{
-            message:"this hurt my head",
+             //To probably update this in the future make find a way to make the movie index varied
             movielist:[{title:"", desc:"",imgsrc:""},{title:"", desc:"",imgsrc:""},{title:"", desc:"",imgsrc:""}],
             httpsMovieRequest: "",
             baseUrlHttpsRequest: ""
             
+        },
+        //The calls the function as soon as it's loaded
+        mounted: function(){
+            this.movieRequest();
         },
         methods:
         {
@@ -114,8 +120,12 @@ var movied = new Vue(
                 this.baseUrlHttpsRequest.open('get',"https://api.themoviedb.org/3/configuration?api_key=9b362e3e690674bb239092bc71c6c0a8")
                 this.baseUrlHttpsRequest.send(null);
 
+                //This will call the movieRequestInside function in vue script
                 this.baseUrlHttpsRequest.onreadystatechange = this.movieRequestInside;
             },
+            //This fuction sets the different variables into the movielist which only has three index
+            //One way to update this is to be able to decided what api database you're going to use for the site
+            //So custom XML Request and maybe also set a number for how many movies you want returned
             movieRequestInside: function()
             {
                 if(this.httpsMovieRequest.readyState == 4 && this.httpsMovieRequest.status == 200)
@@ -130,6 +140,7 @@ var movied = new Vue(
             
                         for(var i = 0; i < 3; i++)
                         {
+                            //populates the movielist array
                             this.movielist[i].title = movieObj.results[i].title;
                             this.movielist[i].desc = movieObj.results[i].overview;
                             this.movielist[i].imgsrc = baseUrlObj.images.base_url + baseUrlObj.images.poster_sizes[5] + movieObj.results[i].poster_path;

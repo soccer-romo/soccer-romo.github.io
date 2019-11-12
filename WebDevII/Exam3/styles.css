@@ -1,0 +1,15 @@
+#card
+{
+    border: solid 2px black; 
+    width: 20%; 
+    height: 800px; 
+    text-align: center; 
+    margin: 1%; 
+    float:left; 
+    overflow: hidden;
+}
+#tvDesc
+{
+    height: 100px;
+    overflow-y: hidden;
+}
