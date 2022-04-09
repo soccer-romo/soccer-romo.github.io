@@ -5,7 +5,7 @@
   "main": "tryThis.js",
   "dependencies": {
     "chalk": "^2.4.2",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {},
   "scripts": {
